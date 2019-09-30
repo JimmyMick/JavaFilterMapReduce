@@ -4,8 +4,18 @@ public class Record {
 
     private String team;
     private Integer wins;
-    private Integer loses;
+    private Integer losses;
     private Integer ties;
+
+    public Record(String team){
+        this(team,0,0,0);
+    }
+    public Record(String team, Integer wins, Integer losses, Integer ties) {
+        this.team = team;
+        this.wins = wins;
+        this.losses = losses;
+        this.ties = ties;
+    }
 
     public String getTeam() {
         return team;
@@ -23,12 +33,12 @@ public class Record {
         this.wins = wins;
     }
 
-    public Integer getLoses() {
-        return loses;
+    public Integer getLosses() {
+        return losses;
     }
 
-    public void setLoses(Integer loses) {
-        this.loses = loses;
+    public void setLosses(Integer losses) {
+        this.losses = losses;
     }
 
     public Integer getTies() {
